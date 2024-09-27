@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+  <div class="container-fluid">
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+      >
+        <rect
+          x="16"
+          y="12"
+          width="32"
+          height="40"
+          rx="4"
+          fill="#ffffff"
+          stroke="#5271ff"
+          stroke-width="2"
+        />
+        <circle cx="22" cy="18" r="4" fill="#f89b29" />
+        <rect x="28" y="16" width="18" height="4" rx="2" fill="#5271ff" />
+        <circle cx="22" cy="30" r="4" fill="#53d769" />
+        <rect x="28" y="28" width="18" height="4" rx="2" fill="#5271ff" />
+        <circle cx="22" cy="42" r="4" fill="#ff4757" />
+        <rect x="28" y="40" width="18" height="4" rx="2" fill="#5271ff" />
+      </svg>
+
+      <a class="navbar-brand" href="#">To Do List</a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto w-100 px-3">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="Home"
+            routerLinkActive="bg-white rounded px-3"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="signup"
+            routerLinkActive="bg-white rounded px-3"
+            >Signup</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="bg-white rounded px-3"
+            routerLink="login"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item ms-lg-auto">
+          <a
+            class="nav-link logout"
+           
+            (click)="logout()"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

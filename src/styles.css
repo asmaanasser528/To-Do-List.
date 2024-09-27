@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add g.lobal styles to this file, and also import other style files */
+.logout {
+  cursor: pointer;
+}
+body {
+  /* background: linear-gradient(135deg, #f89b29, #5271ff, #53d769); */
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-image: url(./assets/images/pexels-sujasen-10718307.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.register {
+  background-color: #5283e5;
+}
+.navbar {
+  padding-block: 0;
+  background-color: #02a2de;
+  /* background-color: #67d4cd; */
+}
+.add-task {
+  background-image: url(./assets/images/to-do-7355222_1280.jpg);
+}
+.home-tasks {
+  background-color: aliceblue;
+}
+.update-btn {
+  background-color: #78b7d0;
+}
+.update-btn:hover {
+  background-color: #227b94;
+}
+.delete-btn {
+  background-color: #ffeb00;
+}
+.delete-btn:hover {
+  background-color: #b4a929;
+}
+.upate-task {
+  background-color: #5283e5;
+}

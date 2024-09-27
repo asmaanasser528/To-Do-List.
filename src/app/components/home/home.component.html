@@ -1,0 +1,125 @@
+<!-- Button trigger modal -->
+<div class="w-100 vh-100 home-tasks">
+  <div class="container text-center">
+    <button
+      type="button"
+      class="btn btn-info m-4"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Add New Task
+    </button>
+  </div>
+
+  <div class="container mt-3">
+    <div class="row g-4">
+      @for (note of noteList ; track $index){
+      <div class="col-md-3">
+        <div class="card bg-light rounded p-3 text-center shadow">
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.content }}</p>
+          <button class="btn my-3 update-btn" (click)="setUpdateModal(note)">
+            Update
+          </button>
+          <button class="btn delete-btn" (click)="deleteNote(note._id)">
+            Delete
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Add Modal -->
+  <div
+    class="modal fade add-task"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form [formGroup]="addNoteForm" (ngSubmit)="addNote()">
+          <div class="modal-body">
+            <div>
+              <label for="">title</label>
+              <input type="text" class="form-control" formControlName="title" />
+              <label for="">content</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="content"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- update Modal -->
+  <div
+    class="modal fade upate-task"
+    id="updateModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update Task</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form [formGroup]="UpdateNoteForm" (ngSubmit)="UpdateNote()">
+          <div class="modal-body">
+            <div>
+              <label for="">title</label>
+              <input type="text" class="form-control" formControlName="title" />
+              <label for="">content</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="content"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Update Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
